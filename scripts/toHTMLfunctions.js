@@ -1,16 +1,29 @@
-import {famousPeopleArray} from "./famousPeopleData.js"
+let counter = 0;
+export const personToHTML = (personObj) => {
+    counter++
+    let result = `
+    <section class="famous-person-card" id="famousperson-${counter}">
+        
+        <header class="name-title">
+        <h2>${personObj.name} Title: ${personObj.title}</h2>
+        </header>
+        
+        <section class="bio">
+        <p>${personObj.bio} and ${personObj.image} go here</p>
+        </section>
+        
+        <footer class="lifespan">
+        <p>${personObj.lifespan.birth} - ${personObj.lifespan.death}</p>
+        </footer>
 
-const personToHTML = (personObj) => {
-  return `<person>
-        <header class="name-title">${personObj.name} and ${personObj.title} go here</header>
-        <section class="bio">${personObj.bio} and ${personObj.image} go here</section>
-        <footer class="lifespan">${personObj.lifespan.birth} ${personObj.lifespan.death}info goes here</footer>
-    </person>`
-}
-
-export const insertIntoDom = () => {
-    const selector = document.querySelector(".famous-people")
-    famousPeopleArray.forEach(select => {
-        selector.innerHTML += personToHTML(select)
-    })
+    </section>
+    `
+    
+    if (counter % 2 === 0){
+        const selector = document.querySelector(".famous-people")
+        selector.innerHTML += `<div class="person-even">`+result+`</div>`
+    } else {
+        const selector = document.querySelector(".famous-people")
+        selector.innerHTML += `<div class="person-odd">`+result+`</div>`
+    }
 }

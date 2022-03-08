@@ -1,0 +1,11 @@
+.person-even {
+    background-color: lightyellow;
+}
+
+.person-odd {
+    background-color: lightblue;
+}
+
+.add-border {
+    border: dotted black 2px
+}
