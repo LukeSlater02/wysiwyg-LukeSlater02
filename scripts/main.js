@@ -6,20 +6,16 @@ famousPeopleArray.forEach(select => {
 })
 
 const handlePersonClicked = (event) => {
-    console.log(event.target.id);
-    document.querySelector("section").classList.toggle("add-border");
+    event.currentTarget.classList.toggle("add-border");
 }
-document.querySelector("#famous-people").addEventListener("click", handlePersonClicked);  
-    
 
+//all instances of .famous-person-card
+//querySelectorAll gets all instances of an element, whereas querySelector will only return the first instance it finds
+const cards = document.querySelectorAll('.famous-person-card');
 
-
-
-
-
-
-
-
+cards.forEach((card) => {
+    card.addEventListener("click", handlePersonClicked);
+})
 
 // if (event.target.id.startsWith("famousperson")){
 //     const splitId = event.target.id.split("--");
