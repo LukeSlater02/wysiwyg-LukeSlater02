@@ -8,8 +8,9 @@ export const personToHTML = (personObj) => {
         <h2>${personObj.name} Title: ${personObj.title}</h2>
         </header>
         
-        <section class="bio">
-        <p>${personObj.bio} and ${personObj.image} go here</p>
+        <section class="bio" id="bio-${counter}">
+        <p>${personObj.bio}</p>
+        <p>${personObj.image}</p>
         </section>
         
         <footer class="lifespan">

@@ -8,6 +8,7 @@ export const famousPeopleArray = [
           birth: 1747,
           death: 1797
         },
+        id: 1
     },
     {
         title: "EVEN",
@@ -18,6 +19,7 @@ export const famousPeopleArray = [
           birth: 1747,
           death: 1797
         },
+        id: 2
     },
     {
         title: "ODD",
@@ -28,6 +30,7 @@ export const famousPeopleArray = [
           birth: 1747,
           death: 1797
         },
+        id: 3
     },
     {
         title: "EVEN",
@@ -38,6 +41,7 @@ export const famousPeopleArray = [
           birth: 1747,
           death: 1797
         },
+        id: 4
     },
 ]
 
